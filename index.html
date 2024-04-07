@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos.css">
+    <script src="./logica.js" type="module" defer> </script>
+</head>
+<body>
+    <header>
+        <img src="./images/logo.svg" alt="logo de la pagina">
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./monstruos.html">Monstruos</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <h1>Crud Monstruos</h1>
+    <form id="modificar">
+        <fieldset>
+            <p>Informacion del monstruo</p>
+            <div class = "divField"><label for="txtNombre" >Nombre:<input type="text" id="txtNombre" name = "Nombre" autocomplete="off" placeholder="Ingrese nombre" title="Aca deberia ingresar el nombre del monstruo"></label></div>
+            <div for="txtAlias" class = "divField"><img src="./images/icono_alias.svg" alt="icono alias"><label>Alias:<input type="text" id="txtAlias" name = "Alias" autocomplete="off" placeholder="Ingrese alter-ego" title="Aca deberia ingresar el alias del monstruo"></label></div>
+            <div id="radioItems" class = "divField"><img src="./images/icono_defensa.svg" alt="icono defensa"><label>Defensa:  
+                <input class="item" type="radio" name="defensa" value="pocion" id="radioPocion"><label for="radioPocion">Pocion</label>
+                <input class="item" type="radio" name="defensa" value="crucifijo" id="radioCrucifijo"><label for="radioCrucifijo">Crucifijo</label>
+                <input class="item" type="radio" name="defensa" value="estaca" id="radioEstaca"><label for="radioEstaca">Estaca</label>
+                <input class="item" type="radio" name="defensa" value="plata" id="radioPlata"><label for="radioPlata">Plata</label>
+                </label></div>
+            <div class = "divField"><img src="./images/icono_miedo.svg" alt="icono miedo"><label for="rangeMiedo" >Miedo:<input type="range" name="Miedo" id ="rangeMiedo" min="1" max="100" value="50"></label></div>
+            <div class = "divField"><img src="./images/icono_tipo.svg" alt="icono tipo"><label>Tipo:
+            <select name="Tipo" id="selectTipo">
+            </select></label></div>
+            <button id="btnGuardar"><img src="./images/icono_guardar.svg" alt="icono guardar"><span>Agregar</span></button>
+            <button id="btnCancelar">Cancelar</button>
+            <button id="btnEliminar">Eliminar</button>        
+        </fieldset>     
+    </form>
+    <!-- <div id="lista">
+        <div id="botones">
+            <button id="btnGuardarLista" title="Aca guardara la tabla de monstruos en la base de datos">Guardar</button>
+            <button id="btnEliminar">Eliminar</button> 
+            <button id="btnCancelarLista" title="Aca reiniciara la tabla a como estaba en un principio">Cancelar</button>
+        </div> -->
+        <table id="tabla"></table>
+    </div>
+</main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./monstruos.html">Monstruos</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <p>Laboratorio 3 - Todos los derechos reservados 2023 &copy;</p>
+    </footer>
+</body>
+</html>
