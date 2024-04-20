@@ -1,0 +1,489 @@
+:root {
+    --color-primario: #4c7077;
+    --color-secundario: #293d41; 
+    --color-detalles:black;
+    --color-letra: white;
+    --color-resalte: #96D7E4;
+  }
+*{
+    font-family: "Syncopate", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    box-sizing:  border-box;
+    margin:5px;
+    border-radius: 5px;
+    color: var(--color-letra);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-resalte) var(--color-primario);
+    /* text-transform:uppercase; */
+}
+html {
+    scroll-behavior: smooth; /* Hace que el desplazamiento sea suave */
+  }
+  
+  
+/* html
+{
+
+    margin:0;
+    border: 0;
+    background-image: url("../asserts/svg/Fondo.svg");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    
+} */
+main,header,footer,section,article, body, html{
+    width: 100%;
+    margin:0;
+    border: 0;
+    border-radius: 0px;
+    /* margin-top: 0;
+    margin-bottom: 0; */
+    /* display: flex;
+    align-items: center;
+    flex-direction: column; */
+}
+body{
+    background-image: radial-gradient(20% 12% at top right,var(--color-primario),var(--color-secundario));
+}
+/* main{
+    flex-direction: column;
+} */
+header{
+    height: 10vh;
+    /* justify-content:end;
+    flex-direction: row; */
+    /* z-index: -1; */
+}
+/* footer{
+    flex-direction: row;
+} */
+section{
+    /* justify-content:space-evenly; */
+    /* flex-direction: column; */
+    height: 90vh;
+    /* margin-bottom: -100px;  */
+
+    scroll-margin-top: 20vh;
+
+}
+/* h2{
+    margin-top: 10vh;
+} */
+.fixedNavBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black; 
+    z-index: 1000; 
+    box-shadow: 0px 2px 10px var(--color-primario); /* Color cyan */
+    border-bottom: 2px solid transparent; /* Borde inferior transparente */
+    transition: box-shadow 0.3s ease; /* Transición suave para la sombra */
+
+}
+.fixedNavBar:hover {
+    box-shadow: 0px 2px 20px var(--color-resalte); /* Aumenta la intensidad al hacer hover */
+}
+/* section.scrollMargin10{
+    scroll-margin-top: 10vh;
+}
+section.scrollMargin20{
+    scroll-margin-top: 20vh;
+} */
+article{
+    /* justify-content: flex-start;
+    flex-direction: row; */
+}
+ol {
+    counter-reset: list-counter; /* Reinicia el contador */
+    width: 90vw;
+}
+
+ol li {
+    counter-increment: list-counter; /* Incrementa el contador para cada elemento de la lista */
+}
+
+ol li::before {
+    content: counter(list-counter); /* Utiliza el valor del contador para generar los números */
+    font-weight: bold; /* Establece el grosor de la fuente */
+    color: var(--color-resalte); /* Color del número */
+    /* transition: transform 0.3s ease; */
+}
+ol li:hover::before{
+    color: var(--color-letra);
+}
+ul {
+    list-style: none; /* Elimina el punto de los ítems */
+    padding: 0;
+
+    /* display: flex;
+    flex-direction: row; */
+    /* font-size: 18px; */
+  }
+  a{
+    text-decoration: none; /* Quitar subrayado */
+
+  }
+  li{
+    /* display: flex;
+    flex-direction: row;
+    align-items: center; */
+    /* width: auto; */
+    /* display: inline-block; */
+    /* overflow: auto; */
+    /* overflow-y: hidden; */
+/* width: auto; */
+  }
+
+
+h2{
+    /* width: 100vw; */
+    height: 5vh;
+    /* object-position: center; */
+}
+h1{
+    /* width: 55vw; */
+    width: 30vw;
+    /* object-position: center; */
+}
+
+textarea{
+    width: 100%;
+    height:50%;
+    margin: 0;
+    resize: none;
+    background-color: var(--color-detalles);
+    border: 1px solid var(--color-primario);
+}
+textarea:focus {
+    outline: 1px solid var(--color-resalte);
+
+}
+
+
+
+
+#formContacto{
+    /* align-items: flex-start;
+    justify-content: space-evenly; */
+
+    height: 65%;
+    /* height:auto; */
+    width: 100%;
+    box-sizing:border-box;
+    color: black;
+    margin: 0;
+
+}
+
+/*Sections*/
+
+#SectionServicios,#SectionTecnologias,#SectionContacto{
+background-color: var(--color-detalles);
+
+}
+#SectionTrabajos{
+    background-image: radial-gradient(circle, var(--color-primario) 0%,var(--color-secundario) 40%);
+}
+#SectionResumen{
+    background-color: var(--color-secundario);
+}
+#SectionContacto{
+    background-image: radial-gradient(circle at 25% 75%, var(--color-primario) 0%, var(--color-detalles) 20% );
+}
+/* #SectionQuienSoy{
+
+    width:85vw;
+    height:50vh; 
+} */
+/*Articles*/
+
+#ArticleTrabajos,#ArticlePresentacion{
+    background-repeat: no-repeat;
+    /* display: flex;
+    align-items: center;
+    justify-content:space-evenly; */
+}
+
+#SectionPresentacion{
+    /* background-image: url("../asserts/svg/Fondo-fotoPresentacion.svg"); */
+    /* background-position: left;
+    background-size: 61vw;
+    height: 95vh; */
+    /* height: 100vh; */
+    /* background-image: radial-gradient(30% 60% at top right, #96D7E4, rgb(0, 0, 0)); */
+    background-image: radial-gradient(circle at 65% 75%, var(--color-primario) 0%, var(--color-secundario) 40%, rgba(0, 0, 0, 0) 60%);
+    /* width: 60vw; */
+    /* z-index: -1; */
+ 
+    
+}
+#ArticleTrabajos{
+    height: 45vh;
+    width: 100%;
+    background-size: 44vw;
+}
+
+#Article
+/*Divs*/
+#DivTrabajos{
+    /* display: flex;
+    align-items: center;
+    justify-content: center;  */
+}
+#DivFotoPresentacion{
+    width:39.7%;
+    height:90vh; 
+    z-index: 1;
+    
+    /* display: flex;
+    align-items: center;
+    justify-content: center;  */
+}
+#DivPresentacion{
+    /* display: flex;
+    justify-content:space-around;
+    flex-direction: column; */
+    width: 35vw;
+    height: 60vh;
+    z-index: 1;
+}
+
+#divForm{
+    color: var(--color-detalles);
+    width: 30vw;
+    height: 60vh;
+    background-color:var(--color-secundario);
+    border-radius: 10px;
+    /* align-items: flex-start;
+    justify-content: center; */
+    padding: 2%;
+}
+
+/*Imagenes*/
+#FotoPresentacion{
+    border-radius: 10%;    
+    object-fit:contain;
+    object-position: center;
+    border-color:var(--color-resalte);
+    border-style:solid;
+    height: 60vh;
+    background-color: var(--color-detalles);
+    filter: grayscale(30%);
+}
+h3{
+   font-size: 30px;
+}
+  
+
+@keyframes agrandar-achicar {
+    0% {
+      transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+      transform: scale(1.1); /* Agrandar al 120% del tamaño original */
+    }
+    100% {
+      transform: scale(1); /* Volver al tamaño normal */
+    }
+  }
+  
+#Presentacion1{
+    position: absolute;
+    top: 35%;
+    left: 22%;
+    /* transform: translate(-50%, -50%); */
+    width: 50%;
+    height: 20vh;
+    
+    /* margin: 0px; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-size: 10vh;
+    z-index: 2;
+    text-transform:uppercase;
+    color: transparent; /* Hace que el texto sea transparente */
+    -webkit-text-stroke: 0.25px var(--color-primario);
+    animation: agrandar-achicar 5s infinite alternate; /* La animación se repite infinitamente y alterna entre agrandar y achicar */
+    /* text-shadow:
+    0 0 75px var(--color-resalte),
+    0 0 100px var(--color-resalte),
+    0 0 125px var(--color-resalte); */
+
+    
+}
+#Presentacion2{
+    font-size: 3vh;
+}
+#Presentacion3{
+    font-size: 5vh;
+    text-transform:uppercase;
+    /* width: 30vw; */
+}
+
+/* #Presentacion4{
+    font-family: "Chivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: none;
+    font-size: 2vh;
+
+} */
+
+#divTrabajos{
+    padding: 0 5px;
+    background-color: var(--color-detalles);
+    border-radius: 20px;
+    /* transition: all 1s ease; */
+
+}
+
+
+#descargarCV{
+    border: 1px solid var(--color-resalte);
+    border-radius: 40px;
+    padding: 2px 15px;
+    font-size: 10px;
+    white-space: nowrap;
+    color: var(--color-resalte);
+    transition: all 1s ease-out;
+    /* margin: 0; */
+}
+#descargarCV:hover {
+    color: var(--color-letra);
+    background-color: var(--color-resalte);
+    border-color: var(--color-letra);
+}
+
+
+#buttonEnviar {
+    height: 10%;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    /* padding: 25px 30px; */
+    /* margin: 40px 0; */
+    color: var(--color-resalte);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    /* letter-spacing: 4px; */
+    overflow: hidden;
+    /* margin-right: 50px; */
+    background-color: transparent;
+    border: none;
+}
+
+
+#buttonEnviar:hover {
+    background: var(--color-resalte);
+    color: var(--color-letra);
+    box-shadow: 0 0 5px var(--color-resalte),
+        0 0 25px var(--color-resalte),
+        0 0 50px var(--color-resalte),
+        0 0 200px var(--color-resalte);
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); */
+}
+
+#buttonEnviar:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+#buttonEnviar:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+#buttonEnviar span {
+    position: absolute;
+    display: block;
+    margin: 0;
+}
+
+#buttonEnviar span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-resalte));
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+#buttonEnviar span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,
+            transparent, var(--color-resalte));
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+#buttonEnviar span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--color-resalte));
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+
+#buttonEnviar span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--color-resalte));
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}

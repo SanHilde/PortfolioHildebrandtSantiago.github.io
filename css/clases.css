@@ -1,0 +1,306 @@
+.listasColumnas{
+    display: flex;
+    flex-direction: column;
+}
+.listasFilas{
+    display: flex;
+    flex-direction: row; 
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.justify-content-spaceAround{
+    justify-content: space-around;
+}
+.justify-content-flexStart{
+    justify-content:flex-start;
+}
+.justify-content-spaceBetween{
+    justify-content: space-between;
+}
+.justify-content-spaceEvenly{
+    justify-content: space-evenly;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-end{
+    justify-content: end;
+}
+.align-items-center{
+    align-items: center;
+}
+.inputContacto{
+    margin: 0;
+    height: 100%;
+    width: 45%;
+    background-color: var(--color-detalles);
+    border: 1px solid var(--color-primario);
+}
+.inputContacto:focus {
+    outline: 1px solid var(--color-resalte);
+
+}
+
+.noMarginSide
+{
+    margin: 5px 0px;
+}
+.noMargin{
+    margin:0;
+}
+.divInput{
+    width: 100%;
+    height: 12.5%;
+    margin: 0;
+}
+
+
+.iconRef {
+    border: 1px solid var(--color-resalte);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 25px;
+    font-size: 10px;
+    color: var(--color-resalte);
+    transition: all 1s ease-out;
+}
+
+.iconRef:hover {
+    color: var(--color-letra);
+    background-color: var(--color-resalte);
+    border-color: var(--color-letra);
+}
+
+
+.iconStatic{
+    background-image: linear-gradient( var(--color-primario) 0%, var(--color-secundario) 100%);
+    height: 40px;
+    aspect-ratio: 1/1;
+    /* width: 40px; */
+    padding: 3%;
+    border-radius: 50%;
+    font-size: 20px;
+    
+}
+.Logo{
+    height: 7vh;
+    width: auto;
+    filter: grayscale(100%);
+    /* filter: sepia(100%); */
+    margin: 10px;
+}
+.card:hover .Logo{
+    filter: grayscale(0%);
+
+}
+.card:hover{
+    transform: scale(1.1);
+    border: 1px solid var(--color-resalte);
+}
+
+.listasLogos{
+    margin: 10px;
+}
+.card{
+    background-color: var(--color-secundario);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    /* padding: 18%; */
+    
+}
+.fontColorResalte{
+    color:var(--color-resalte);
+    transition: color 1s ease;
+}
+
+.cardBlack{
+    /* background-color: var(--color-detalles); */
+    border-radius: 10px;
+    padding: 5%;
+    width: 100%;
+    /* transition: background 1s ease; */
+    transition: .5s --gradient-start, .5s --gradient-end;
+    --gradient-start: var(--color-detalles);
+    --gradient-end: var(--color-detalles);
+    background: linear-gradient(
+        to right,
+        var(--gradient-start),
+        var(--gradient-end)
+    );
+}
+
+.cardBlack:hover{
+    /* background:  linear-gradient(to right, var(--color-resalte) 0%, var(--color-primario) 100%); */
+    --gradient-start: var(--color-resalte);
+    --gradient-end: var(--color-primario);
+}
+.cardBlack:hover .fontColorResalte{
+    color: var(--color-letra);
+}
+#descargarCV:hover .fontColorResalte{
+    color: var(--color-letra);
+}
+
+.textoDetalle{
+    font-family: "Chivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: none;
+    font-size: 2vh;
+}
+.serviciosP{
+    width:50vw;
+}
+.serviciosH{
+    width: 25vw;
+    font-size: 3vh;
+}
+.serviciosLi{
+    height: 15vh;
+    /* border-style:solid; */
+    border-bottom: 1px solid var(--color-primario);
+    /* border-color: var(--color-primario); */
+    border-radius: 0;
+    /* transition: color 0.3s ease; */
+    transition: .5s --gradient-start, .5s --gradient-end;
+    --gradient-start: var(--color-detalles);
+    --gradient-end: var(--color-detalles);
+    background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+);
+}
+
+.serviciosLi:hover{
+/* background:  linear-gradient(to right, var(--color-resalte) 0%, var(--color-primario) 100%); */
+--gradient-start: var(--color-resalte);
+--gradient-end: var(--color-primario);
+
+/* .serviciosLi:hover{
+    background:  linear-gradient(to right, var(--color-resalte) 0%, var(--color-primario) 100%); */
+    /* animation: fadeUpIn 0.5s ease forwards; */
+}
+  
+.columnaResumen{
+    width: 30vw;
+}
+.conteiner{
+    width: 80vw;
+}
+.tituloDegrades {
+    background:  linear-gradient(to right, var(--color-resalte) 0%, var(--color-letra) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 20px;
+    width:fit-content;
+}
+
+.NavBar{
+    text-transform:uppercase;
+    font-size: 12px;
+}
+
+.numerosResaltados{
+    color: var(--color-primario);
+
+}
+.tituloNormal{
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.destacarLetras{
+    transition: all .3s ease-out;
+}
+.destacarLetras:hover{
+    color: var(--color-resalte);
+}
+@property --gradient-start {
+    syntax: "<color>";
+    initial-value: transparent;
+    inherits: false;
+  }
+  
+  @property --gradient-end {
+    syntax: "<color>";
+    initial-value: transparent;
+    inherits: false;
+  }
+
+.buttonTrabajos{
+    /* background: var(--color-detalles); */
+    border-radius: 15px;
+    border-style: none;
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor apuntador */
+    transition: .5s --gradient-start, .5s --gradient-end; /* Agregamos transición para el color de fondo */   
+    padding: 5px;
+    --gradient-start: var(--color-detalles);
+    --gradient-end: var(--color-detalles);
+    background: linear-gradient(
+        to right,
+        var(--gradient-start),
+        var(--gradient-end)
+      );
+}
+
+.prender {
+    /* background: var(--color-primario); */
+    --gradient-start: var(--color-resalte);
+    --gradient-end: var(--color-primario);
+    /* background: linear-gradient(
+        to right,
+        var(--gradient-start),
+        var(--gradient-end)
+      ); */
+}
+
+
+@keyframes underline {
+    from {
+        width: 0; /* Ancho inicial de la línea */
+        left: 0; /* Posición inicial a la izquierda */
+    }
+    to {
+        width: 100%; /* Ancho final de la línea (igual al ancho del elemento) */
+        left: 0; /* Posición final a la izquierda */
+    }
+}
+
+.subrayar {
+    position: relative; /* Asegura que el enlace sea un contexto de posicionamiento para el pseudo-elemento */
+    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+}
+
+.subrayar::after {
+    content: ''; /* Contenido del pseudo-elemento */
+    position: absolute; /* Posiciona el pseudo-elemento en relación al enlace */
+    bottom: -5px; /* Lo coloca 5px por encima del borde inferior del enlace */
+    left: 0; /* Lo coloca al principio del enlace */
+    width: 0; /* Inicialmente no hay subrayado */
+    height: 2px; /* Grosor de la línea */
+    background: linear-gradient(to right, var(--color-resalte) 0%, transparent 100%);
+    transition: width 0.3s ease; /* Transición del ancho del subrayado */
+}
+
+.subrayar:hover::after,
+.subrayar.active::after {
+    width: 100%; /* Ancho del subrayado al hacer hover o al estar activo */
+}
+
+
+.rotate{
+    transition: transform 0.3s ease; /* Transición suave para la rotación */
+}
+.serviciosLi:hover .rotate {
+    transform: rotate(-45deg); /* Rotación del icono al hacer hover */
+}
+/* .scrollMargin10{
+    scroll-margin-top: 10vh;
+}
+.scrollMargin20{
+    scroll-margin-top: 20vh;
+} */
