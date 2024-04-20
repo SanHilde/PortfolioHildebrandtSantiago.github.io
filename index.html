@@ -1,64 +1,307 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos.css">
-    <script src="./logica.js" type="module" defer> </script>
+    <script src="https://kit.fontawesome.com/1a3ee2a058.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/clases.css">
+    <script src="../js/animaciones.js" type="module" defer> </script>
+    <title>Portfolio Hildebrandt</title>
 </head>
-<body>
-    <header>
-        <img src="./images/logo.svg" alt="logo de la pagina">
-        <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./monstruos.html">Monstruos</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+
+<body class="listasColumnas align-items-center">
+    <header id="mainNavBar" class="listasFilas align-items-center justify-content-end">
+        <nav >
+            <ul class="listasFilas align-items-center">
+                <!-- <li><a id="NavBar" href="#QuienSoy">Quien soy</a></li> -->
+                <li><a class="NavBar subrayar" href="#SectionServicios">Servicios</a></li>
+                <li><a class="NavBar subrayar" href="#SectionTrabajos">Trabajos</a></li>
+                <li><a class="NavBar subrayar" href="#SectionTecnologias">Tecnologías</a></li>
+                <li><a class="NavBar subrayar" href="#SectionResumen">Resumen</a></li>
+                <li><a class="NavBar subrayar" href="#SectionContacto">Contactame</a></li>
             </ul>
         </nav>
     </header>
-<main>
-    <h1>Crud Monstruos</h1>
-    <form id="modificar">
-        <fieldset>
-            <p>Informacion del monstruo</p>
-            <div class = "divField"><label for="txtNombre" >Nombre:<input type="text" id="txtNombre" name = "Nombre" autocomplete="off" placeholder="Ingrese nombre" title="Aca deberia ingresar el nombre del monstruo"></label></div>
-            <div for="txtAlias" class = "divField"><img src="./images/icono_alias.svg" alt="icono alias"><label>Alias:<input type="text" id="txtAlias" name = "Alias" autocomplete="off" placeholder="Ingrese alter-ego" title="Aca deberia ingresar el alias del monstruo"></label></div>
-            <div id="radioItems" class = "divField"><img src="./images/icono_defensa.svg" alt="icono defensa"><label>Defensa:  
-                <input class="item" type="radio" name="defensa" value="pocion" id="radioPocion"><label for="radioPocion">Pocion</label>
-                <input class="item" type="radio" name="defensa" value="crucifijo" id="radioCrucifijo"><label for="radioCrucifijo">Crucifijo</label>
-                <input class="item" type="radio" name="defensa" value="estaca" id="radioEstaca"><label for="radioEstaca">Estaca</label>
-                <input class="item" type="radio" name="defensa" value="plata" id="radioPlata"><label for="radioPlata">Plata</label>
-                </label></div>
-            <div class = "divField"><img src="./images/icono_miedo.svg" alt="icono miedo"><label for="rangeMiedo" >Miedo:<input type="range" name="Miedo" id ="rangeMiedo" min="1" max="100" value="50"></label></div>
-            <div class = "divField"><img src="./images/icono_tipo.svg" alt="icono tipo"><label>Tipo:
-            <select name="Tipo" id="selectTipo">
-            </select></label></div>
-            <button id="btnGuardar"><img src="./images/icono_guardar.svg" alt="icono guardar"><span>Agregar</span></button>
-            <button id="btnCancelar">Cancelar</button>
-            <button id="btnEliminar">Eliminar</button>        
-        </fieldset>     
-    </form>
-    <!-- <div id="lista">
-        <div id="botones">
-            <button id="btnGuardarLista" title="Aca guardara la tabla de monstruos en la base de datos">Guardar</button>
-            <button id="btnEliminar">Eliminar</button> 
-            <button id="btnCancelarLista" title="Aca reiniciara la tabla a como estaba en un principio">Cancelar</button>
-        </div> -->
-        <table id="tabla"></table>
-    </div>
-</main>
-    <footer>
+    <main class="listasColumnas align-items-center">
+        <section id="SectionPresentacion"
+            class="listasFilas align-items-center justify-content-spaceBetween conteiner">
+            <p id="Presentacion1" class="listasFilas align-items-center justify-content-center">¡Hola!</p>
+            <div id="DivPresentacion" class="listasColumnas justify-content-spaceEvenly">
+                <p id="Presentacion2">Soy Santiago</p>
+                <p id="Presentacion3" class="tituloDegrades">Full stack developer + diseñador industrial</p>
+                <p id="Presentacion4" class="textoDetalle">La fusión en ambas carreras me permite llevar un paso más
+                    allá los diseños que
+                    quieras lograr. Me encanta resolver problemas, por código o a través de un producto.</p>
+                <div class="listasFilas align-items-center">
+                    <a href="" id="descargarCV" class="listasFilas align-items-center justify-content-center ">Descargar
+                        CV<i class="fa-solid fa-download fontColorResalte"></i></a>
+                    <ul class="listasFilas align-items-center justify-content-center noMargin" id="listaIconos">
+                        <li class="listasFilas align-items-center justify-content-center noMargin"><a
+                                href="https://wa.me/+541123152471"><i
+                                    class="fa-brands fa-whatsapp iconRef listasFilas align-items-center justify-content-center "></i></a>
+                        </li>
+                        <li class="listasFilas align-items-center justify-content-center noMargin"><a
+                                href="https://www.linkedin.com/in/santiago-hildebrandt/"><i
+                                    class="fa-brands fa-linkedin-in iconRef listasFilas align-items-center justify-content-center "></i></a>
+                        </li>
+                        <li class="listasFilas align-items-center justify-content-center noMargin"><a
+                                href="https://github.com/SanHilde"><i
+                                    class="fa-brands fa-github iconRef listasFilas align-items-center justify-content-center "></i></a>
+                        </li>
+                        <li class="listasFilas align-items-center justify-content-center noMargin"><a
+                                href="mailto:hildebrandtsantiago.t@gmail.com" ><i
+                                    class="fa-regular fa-envelope iconRef listasFilas align-items-center justify-content-center "></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <img id="FotoPresentacion" src="../asserts/png/FotoPerfil.png">
+        </section>
+        <section id="SectionServicios" class="listasColumnas align-items-center justify-content-spaceEvenly">
+            <h2 id="Servicios" class="tituloDegrades">Servicios</h2>
+            <p class="textoDetalle">Combinar las siguientes areas de trabajo para crear aquello que estas necesitando.
+            </p>
+            <ol class="listasColumnas">
+                <li class="listasFilas justify-content-spaceEvenly align-items-center serviciosLi">
+                    <h3 class="serviciosH tituloNormal">Programacion Full-Stack</h3>
+                    <p class=" textoDetalle serviciosP">Diseño y desarrollo de paginas web, aplicaciones de ventana.</p>
+                    <i class="fa-solid fa-arrow-right rotate"></i>
+                </li>
+                <li class="listasFilas justify-content-spaceEvenly align-items-center serviciosLi">
+                    <h3 class="serviciosH tituloNormal">Diseño Industrial</h3>
+                    <p class=" textoDetalle serviciosP">Diseño de productos, con planos de fabricacion y renders 3D para
+                        presentacion.</p><i class="fa-solid fa-arrow-right rotate"></i>
+                </li>
+                <li class="listasFilas justify-content-spaceEvenly align-items-center serviciosLi">
+                    <h3 class="serviciosH tituloNormal">Simulaciones</h3>
+                    <p class=" textoDetalle serviciosP">Simulación de procesos y prueba de puntos con robots de
+                        automatización para minimización de errores.</p><i class="fa-solid fa-arrow-right rotate"></i>
+                </li>
+                <li class="listasFilas justify-content-spaceEvenly align-items-center serviciosLi">
+                    <h3 class="serviciosH tituloNormal">Diseño gráfico</h3>
+                    <p class=" textoDetalle serviciosP">Diseño de presentaciones,fondos, imagenes que necesite para
+                        destacar sus productos.</p><i class="fa-solid fa-arrow-right rotate"></i>
+                </li>
+            </ol>
+        </section>
+        <section id="SectionTrabajos" class="listasColumnas align-items-center justify-content-spaceEvenly">
+            <h2 class="tituloDegrades">Trabajos</h2>
+            <p class="textoDetalle">Algunos trabajos que fui realizando en toda mi experencia laboral</p>
+            <div id="divTrabajos"><button class="buttonTrabajos">Todos</button><button class="buttonTrabajos">Programación</button><button class="buttonTrabajos">Diseño</button></div>
+        </section>
+        <section id="SectionTecnologias" class="listasColumnas align-items-center justify-content-spaceEvenly">
+            <h2 class="tituloDegrades">Tecnologías</h2>
+            <div id="TecnologiasProgramacion" class="listasColumnas align-items-center conteiner">
+                <h3 class="tituloNormal">Programación</h3>
+                <ul id="ListaProgramacion" class="listasFilas wrap justify-content-center">
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-CSharp.png" alt="Logo C#" class="Logo"></div>C#
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-C.png" alt="Logo C" class="Logo"></div>C
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-CSS.png" alt="Logo CSS" class="Logo"></div>CSS
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-HTML.png" alt="Logo HTML" class="Logo"></div>
+                        HTML
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-JavaScript.png" alt="Logo JavaScript"
+                                class="Logo"></div>JavaScript
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-PHP.png" alt="Logo PHP" class="Logo"></div>PHP
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-SQL.png" alt="Logo SQL" class="Logo"></div>SQL
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-FireBase.png" alt="Logo Firebase" class="Logo">
+                        </div>Firebase
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-Python.png" alt="Logo Python" class="Logo">
+                        </div>Python
+                    </li>
+                </ul>
+            </div>
+            <div id="TecnologiasDiseño" class="listasColumnas align-items-center conteiner">
+                <h3 class="tituloNormal">Diseño</h3>
+                <ul id="ListaDiseño" class="listasFilas justify-content-center wrap">
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-AutoCad.png" alt="Logo AutoCad" class="Logo">
+                        </div>AutoCad
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-Inventor.png" alt="Logo Inventor" class="Logo">
+                        </div>Inventor
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-Solidworks.png" alt="Logo SolidWorks"
+                                class="Logo"></div>SolidWorks
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-Catia.png" alt="Logo Catia" class="Logo"></div>
+                        Catia
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-Delmia.png" alt="Logo Delmia" class="Logo">
+                        </div>Delmia
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-Keyshot.png" alt="Logo Keyshot" class="Logo">
+                        </div>Keyshot
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-Photoshop.png" alt="Logo Photoshop"
+                                class="Logo"></div>Photoshop
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-Illustrator.png" alt="Logo Illustrator"
+                                class="Logo"></div>Illustrator
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-Panasonic.png" alt="Logo DTPS" class="Logo">
+                        </div>DTPS
+                    </li>
+                    <li
+                        class="listasColumnas align-items-center justify-content-center ListaLogos textoDetalle fontColorResalte">
+                        <div class="card"><img src="../asserts/png/Icono-KukaSIM.png" alt="Logo KukaSIM" class="Logo">
+                        </div>KukaSIM
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="SectionResumen" class="listasColumnas align-items-center justify-content-spaceEvenly">
+            <div class="listasFilas justify-content-spaceBetween conteiner">
+                <div class="listasColumnas">
+                    <h2 class="tituloDegrades"><i class="fa-solid fa-briefcase fontColorResalte"></i>Experencia</h2>
+                    <ul class="listasColumnas columnaResumen">
+                        <li class="listasColumnas justify-content-center cardBlack">
+                            <p class="fontColorResalte">2021-Actualidad</p>
+                            <h3 class="tituloNormal">Diseñador Industrial</h3>
+                            <p class="textoDetalle">FreeLance</p>
+                        </li>
+                        <li class="listasColumnas justify-content-center cardBlack">
+                            <p class="fontColorResalte">2021-2023</p>
+                            <h3 class="tituloNormal">Instructor de curso</h3>
+                            <p class="textoDetalle">Universidad Almirante Brown</p>
+                        </li>
+                        <li class="listasColumnas justify-content-center cardBlack">
+                            <p class="fontColorResalte">2017-2021</p>
+                            <h3 class="tituloNormal">Diseñador Industrial Semi Senior</h3>
+                            <p class="textoDetalle">Patagonia CNC Machines</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="listasColumnas">
+                    <h2 class="tituloDegrades"><i class="fa-solid fa-graduation-cap fontColorResalte"></i>Educación</h2>
+                    <ul class="listasColumnas columnaResumen">
+                        <li class="listasColumnas justify-content-center cardBlack">
+                            <p class="fontColorResalte">2022-Actualidad</p>
+                            <h3 class="tituloNormal">Técnico en Programación</h3>
+                            <p class="textoDetalle">Universidad Tecnológica Nacional Avellaneda</p>
+                        </li>
+                        <li class="listasColumnas justify-content-center cardBlack">
+                            <p class="fontColorResalte">2015-2021</p>
+                            <h3 class="tituloNormal">Licenciado en Diseño Industrial</h3>
+                            <p class="textoDetalle">Universidad Nacional de Lanus</p>
+                        </li>
+                        <li class="listasColumnas justify-content-center cardBlack">
+                            <p class="fontColorResalte">2007-2014</p>
+                            <h3 class="tituloNormal">Técnico Electromecanico</h3>
+                            <p class="textoDetalle">Instituto Técnologico San Bonifacio</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="SectionContacto" class="listasFilas align-items-center justify-content-spaceEvenly">
+            <div id="divForm" class="listasColumnas justify-content-spaceBetween">
+                <h2 class="tituloDegrades">Queres contactarme?</h2>
+                <p class="textoDetalle">Aca estan todos los medios por lo cuales podes hacerlo, o podes mandarme un
+                    mensaje directo desde acá y
+                    yo te contesto.</p>
+                <form id="formContacto" class="listasColumnas justify-content-spaceBetween">
+                    <div class="divInput listasFilas justify-content-spaceBetween align-items-center">
+                        <input type="text" name="Nombre" id="InputNombre" class="inputContacto textoDetalle"
+                            placeholder="Nombre"></l>
+                        <input type="text" name="Apellido" id="InputApellido" class="inputContacto textoDetalle"
+                            placeholder="Apellido"></label>
+                    </div>
+                    <div class="divInput listasFilas justify-content-spaceBetween align-items-center">
+                        <input type="text" name="Mail" id="InputMail" class="inputContacto textoDetalle"
+                            placeholder="Mail">
+                        <input type="text" name="Celular" id="InputCelular" class="inputContacto textoDetalle"
+                            placeholder="Celular">
+                    </div>
+                    <textarea id="texto" placeholder="Mensaje" class="textoDetalle"></textarea>
+                    <button id="buttonEnviar"><span></span><span></span><span></span><span></span>Enviar</button>
+                </form>
+            </div>
+            <div>
+                <ul class="listasColumnas">
+                    <li class="listasFilas align-items-center">
+                        <div class="listasFilas justify-content-center align-items-center iconStatic"><i
+                                class="fa-solid fa-mobile-screen-button"></i></div>
+                        <p class="listasColumnas">Celular<a href="https://wa.me/+541123152471"
+                                class="noMarginSide destacarLetras">+54 9 1123152471</a></p>
+                    </li>
+                    <li class="listasFilas align-items-center">
+                        <div class="listasFilas justify-content-center align-items-center iconStatic"><i
+                                class="fa-regular fa-envelope"></i></div>
+                        <p class="listasColumnas">Mail<a href="mailto:hildebrandtsantiago.t@gmail.com"
+                                class="noMarginSide destacarLetras">hildebrandtsantiago.t@gmail.com</a></p>
+                    </li>
+                    <li class="listasFilas align-items-center">
+                        <div class="listasFilas justify-content-center align-items-center iconStatic"><i
+                                class="fa-solid fa-location-dot "></i></div>
+                        <p class="listasColumnas">Dirección <a href="https://maps.app.goo.gl/3vR6PG2tLPdfuxng9"
+                                class="noMarginSide destacarLetras">Piñeyro, Avellaneda</a></p>
+                    </li>
+                    <li class="listasFilas align-items-center">
+                        <div class="listasFilas justify-content-center align-items-center iconStatic"><i
+                                class="fa-brands fa-linkedin-in "></i></div>
+                        <p class="listasColumnas">LinkedIn <a href="https://www.linkedin.com/in/santiago-hildebrandt/"
+                                class="noMarginSide destacarLetras">Santiago Hildebrandt</a></p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="listasColumnas align-items-center">
         <nav>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./monstruos.html">Monstruos</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
+            <ul class="listasFilas align-items-center">
+                <li><a class="NavBar" href="#SectionServicios">Servicios</a></li>
+                <li><a class="NavBar" href="#SectionTrabajos">Trabajos</a></li>
+                <li><a class="NavBar" href="#SectionTecnologias">Tecnologías</a></li>
+                <li><a class="NavBar" href="#SectionResumen">Resumen</a></li>
             </ul>
         </nav>
-        <p>Laboratorio 3 - Todos los derechos reservados 2023 &copy;</p>
-    </footer>
+        <p class="textoDetalle">¡Gracias por llegar hasta aca! - Hildebrandt Santiago</p>
 </body>
+
 </html>
